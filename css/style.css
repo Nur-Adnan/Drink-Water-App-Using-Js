@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+:root {
+  --border-color: #144fc6;
+  --fill-color: #6ab3f8;
+  --background-gradient: linear-gradient(135deg, #3494e4, #6ab3f8);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --cup-shadow: 0px 10px 20px var(--shadow-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-gradient);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  height: 100vh;
+  justify-content: center;
+}
+
+h1 {
+  margin: 10px 0 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+h3 {
+  font-weight: 400;
+  margin: 10px 0;
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 2px var(--shadow-color);
+}
+
+.cup {
+  background-color: #fff;
+  border: 4px solid var(--border-color);
+  color: var(--border-color);
+  border-radius: 0 0 40px 40px;
+  height: 330px;
+  width: 150px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--cup-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cup:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 25px var(--shadow-color);
+}
+
+.cup.cup-small {
+  height: 95px;
+  width: 50px;
+  border-radius: 0 0 15px 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--cup-shadow);
+}
+
+.cup.cup-small.full {
+  background-color: var(--fill-color);
+  color: #fff;
+}
+
+.cup.cup-small:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 15px var(--shadow-color);
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  gap: 10px;
+}
+
+.remained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  transition: 0.3s ease;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: var(--cup-shadow);
+}
+
+.remained span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.remained small {
+  font-size: 1rem;
+}
+
+.percentage {
+  background-color: var(--fill-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2rem;
+  height: 0;
+  transition: height 0.3s ease;
+  border-radius: 0 0 20px 20px;
+  box-shadow: var(--cup-shadow);
+}
+
+.text {
+  text-align: center;
+  margin: 0 0 5px;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px var(--shadow-color);
+}
